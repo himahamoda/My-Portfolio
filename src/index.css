@@ -637,7 +637,7 @@ body:has(#chefs:target) li a[href="#chefs"] {
   background-color: transparent;  
   transition: transform 0.2s; 
   height: 100%;
-} */
+} 
 
 .card:hover {
   transform: scale(1.05); /* Scale up on hover */
