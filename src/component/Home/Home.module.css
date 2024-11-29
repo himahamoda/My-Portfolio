@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on small screens */
+  align-items: center; /* Center items horizontally */
+  padding: 100px;
+  margin-top: 50px;
+  border-radius: 18px; 
+  box-shadow: 0 10px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Full width */
+}
+
+.col-md-6 {
+  flex: 1 1 50%; /* Default to 50% width on medium and larger screens */
+  max-width: 50%; /* Maximum width of 50% */
+  padding: 10px; /* Padding around columns */
+}
+
+.image {
+  width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
+}
+
+.textabout {
+  font-size: 1.5rem; 
+  color: #ffffff; 
+  line-height: 2; 
+  margin: 0; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .col-md-6 {
+      flex: 1 1 90%; /* Full width on small screens */
+      max-width: 90%; /* Maximum width of 100% */
+  }
+
+  .textabout {
+      font-size: 1rem; /* Adjusted font size on small screens */
+  }
+
+  /* Adjust container padding for smaller screens */
+  .container {
+      padding: 60px 20px; /* Reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .textabout {
+      font-size: 0.9rem; /* Smaller font size on extra small screens */
+  }
+
+  .container {
+      padding: 30px 10px; /* Further reduced padding for very small screens */
+  }
+}

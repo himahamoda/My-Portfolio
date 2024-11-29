@@ -1,0 +1,104 @@
+ /* .container {
+    text-align: center;
+} */
+/* 
+/*.title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 10px; 
+}
+
+.imageItem {
+    height: 150px; 
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ccc; 
+} */
+
+
+
+/* .container h1 , h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .imagecontainer {
+    width: 350px;
+    margin: 10px;
+  }
+  
+  .imagecontainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 10 2px 5px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s;
+  }
+  
+  .imagecontainer img:hover {
+    transform: scale(1.06);
+  } */
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:  90px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff; /* Padding for the container */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items */
+    width: 100%; /* Full width */
+}
+
+.imagecontainer {
+  width: 350px;
+    margin: 10px; /* Ensure it doesn't exceed the container width */
+}
+
+.imagecontainer img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .imagecontainer {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+
+    .container {
+        padding: 50px 10px; 
+        margin-bottom: 10%;
+
+      }
+}
+
+@media (max-width: 480px) {
+    .imagecontainer {
+        flex: 1 1 100%; 
+    }
+
+    .container {
+        padding: 30px 5px;
+        margin-top: 10%; /* Further reduced padding for very small screens */
+    }
+}

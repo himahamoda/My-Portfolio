@@ -1,0 +1,853 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Sofia');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+
+:root {
+  --main-color: rgb(0, 0, 0);
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, .2) 10px 2px 44px -1px, rgb(246, 246, 246) 0px 0px 2px 0px, rgba(145, 158, 171, .12) 0px 1px 10px 0px;
+  --font-family: 'Encode Sans Expanded', sans-serif;
+  --Light-Grey: #ffffff;
+  --animation-duration: all 0.4s;
+}
+
+.Texto{
+  font-family: 'Times New Roman', Times, serif;
+}
+.Web .container{
+  margin-top: 20px;
+}
+
+body {
+  font-family: "Playwrite NZ", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #0088ff;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Different font for mobile */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-family: "Verdana", sans-serif; /* Another different font for very small screens */
+    font-size: 14px; /* Even smaller font size for very small screens */
+  }
+}
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
+body.dark-mode .nav-toggle,
+body.dark-mode .close-button,
+body.dark-mode .logo h1,
+body.dark-mode .text h1,
+body.dark-mode .text h2,
+body.dark-mode .text p,
+body.dark-mode .button,
+body.dark-mode .footer,
+body.dark-mode .grid-item img,
+body.dark-mode .social-media-item i {
+  color: #ffffff;
+}
+
+body.dark-mode .button {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+body.dark-mode .grid-item img {
+border: 50;  
+}
+
+.rating-color {
+  color: var(--rating-color);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+a,
+a:hover {
+  color: hsl(0, 0%, 0%);
+  text-decoration: none;
+}
+
+/* nav */
+
+/* Navend */
+
+
+
+
+.Image1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #000000;
+  border-radius: 15px;
+  background-size: cover;
+  display: none;
+
+}
+
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.left-content {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+}
+
+
+
+
+
+.text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.text h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.text p {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+
+.right-content {
+  float: right;
+  width: 50%;
+  padding: 20px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #eee;
+  border-radius: 15px;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .image {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .image {
+    width: 100%;
+  }
+}
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .right-content {
+     float: none;
+     width: 100%; 
+     order: -1; 
+   }
+  .left-content {
+     float: none;
+     width: 100%; 
+     text-align: center;
+   }
+ }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f00;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .left-content,
+  .right-content {
+    float: left;
+    width: 100%;
+  }
+
+}
+
+/* Nav */
+.header .logo {
+  margin-right: auto;
+  background-color: transparent;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.nav-toggle {
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+nav.active {
+  overflow-y: auto;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position:absolute;
+  background-color: transparent;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.nav-linkss {
+  color: #ffffff;
+}
+
+.nav-linkss:hover {
+  color: #ffffff;
+
+}
+
+.header nav {
+  position: fixed;
+  top: -100vh;
+    right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+
+  transition: top 0.5s cubic-bezier(0.71, 0.92, 0.14, 1.25);
+}
+
+.header nav.active {
+  top: 0;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  font-family: "Playwrite NZ", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .header nav ul {
+      font-size: 2rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+}
+
+
+
+.header nav li:last-child {
+  margin-bottom: 0;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #fbfbfb;
+}
+
+.close-button {
+  position: absolute;
+  top: 2px;
+  right: 20px;
+  font-size: 34px;
+  cursor: grab;
+  color: #ffffff;
+}
+
+.nav-toggle {
+  color: white;
+}
+
+
+
+nav .nav-links li a:hover::before {
+  width: 100%;
+}
+
+/* ------------------------nav ------------------------ */
+
+
+body:not(body:has(:target)) li a[href="#home"]::before,
+body:has(#home:target) li a[href="#home"]::before,
+body:has(#contact:target) li a[href="#contact"]::before,
+body:has(#gallery:target) li a[href="#gallery"]::before,
+body:has(#chefs:target) li a[href="#chefs"]::before {
+  width: 100%;
+}
+
+body:not(body:has(:target)) li a[href="#home"],
+body:has(#home:target) li a[href="#home"],
+body:has(#contact:target) li a[href="#contact"],
+body:has(#gallery:target) li a[href="#gallery"],
+body:has(#chefs:target) li a[href="#chefs"] {
+  color: #946767;
+}
+
+/* --------------end Nav -----------------*----------- */
+
+/* image grid  */
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 columns */
+  grid-gap: 10px;
+}
+
+.image-grid img {
+  width: 75%;
+  height: auto;
+}
+/* --------------end image grid -----------------*----------- */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.services {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.gridd {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 3rem;
+  color: #007bff; /* Bootstrap primary color */
+  margin-bottom: 10px;
+}
+
+.service h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* -------------------work ---------------------------- */
+
+.container {
+  max-width: 1100px;
+  margin-top: 30px ;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main {
+  margin-top: 40px;
+}
+
+.main h2 {
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid Button {
+  background-color: black;
+  border: none;
+}
+
+.grid Button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 90%;
+
+  display: block;
+}
+.grid-item p{
+ color: white;
+ justify-content: center;
+  font-size: large;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.socialfooter li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.socialfooter a {
+  text-decoration: none;
+  color: #ffffff;
+}
+/* Footer */
+
+.grid-item {
+  position: relative;
+  /* Add this to make the overlay absolute */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust the overlay color and opacity */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  /* Hide the overlay by default */
+  transition: opacity 0.4s;
+  /* Add a transition effect */
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
+  /* Show the overlay on hover */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+/* Make the grid items show as a row on mobile screens */
+@media only screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-item {
+    width: 100%;
+    margin-bottom: 20px;
+    
+  }
+}
+
+
+/* ----------------------social acc --------------- */
+/* .container {
+  position: relative;
+} */
+
+.social-media {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.social-media-item {
+  margin: 10px;
+}
+
+.social-media-item i {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* 
+/* Home ----------------------------- Styles */
+/* .container {
+  max-width: 1200px; 
+  margin: auto; 
+  padding: 20px; 
+} 
+
+.portfolio-titlee {
+  margin-top: 50px; 
+  text-align: center; 
+  margin-bottom: 20px; 
+} 
+
+ .portfolio-title h1 {
+  font-size: 36px; 
+  font-weight: 700; 
+  color: #ffffff; 
+}  */
+
+/* Content Layout */
+ .content {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+ .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ 
+.col-md-4 {
+  flex: 1 1 300px; /* Flexible basis for columns (minimum width of 300px) */
+  padding: 10px; /* Padding around columns */
+}
+
+/* Card Styles */
+ .card {
+  border: 1px solid #ddd; 
+  border-radius: 8px;   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  margin-bottom: 20px; 
+  background-color: transparent;  
+  transition: transform 0.2s; 
+  height: 100%;
+} */
+
+.card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Card Body Styles */
+ .card-body {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  padding: 20px;
+}
+
+.card-body h2 {
+  font-size: 24px; 
+  font-weight: 700; 
+  color: #ffffff; 
+  margin-bottom: 10px; 
+}
+
+.card-body p {
+  font-size: 16px; 
+  color: #ffffff; 
+} 
+
+/* Responsive Styles */
+
+@media (max-width: 992px) {
+  .col-md-4 {
+    flex: 1 1 45%; 
+  }
+
+  .portfolio-titlee h1 {
+    font-size: 30px; /* Smaller title size */
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 1 1 100%; /* Full width on small screens */
+  }
+
+  .portfolio-titlee h1 {
+    font-size: 28px; /* Smaller title size */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Smaller font size for headings */
+  }
+
+  p {
+    font-size: 0.9rem; /* Smaller description font size */
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-titlee h1 {
+    font-size: 24px; /* Even smaller title size for extra small screens */
+  }
+
+  .card-body h2 {
+    font-size: 20px; /* Smaller font size for headings */
+  }
+
+  .card-body p {
+    font-size: 14px; /* Smaller description font size */
+  }
+}
+
+
+
+/* App.css */
+
+
+
+
+
+/* Home */
+
+.container {
+  padding: 20px;
+ color: #fff;
+}
+
+.portfolio-title {
+ font-size: 36px;
+ font-weight: bold;
+ margin-bottom: 20px;
+}
+
+.stats {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.stat {
+ margin: 20px;
+ text-align: center;
+ border: 0px solid #ddd; 
+ border-radius: 10px; 
+ box-shadow: 0 10px 5px rgba(112, 21, 21, 0.1); 
+}
+
+.stat-number {
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 10px;
+}
+
+.stat-description {
+ font-size: 18px;
+ color: #ccc;
+}
+
+ .buttons {
+ display: flex;
+ justify-content: center;
+ margin-top: 40px;
+}
+
+.button {
+ background-color: wheat;
+ color: #000000;
+ border: none;
+ padding: 10px 20px;
+ font-size: 18px;
+ cursor: pointer;
+ margin: 10px;
+ border: 0px solid #000000; 
+ border-radius: 10px 20px ;
+ box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.button:hover {
+ background-color: #0870e6;
+ color: #ffffff;
+} 
+
+
+/* Branding */
+
+
+/* ********slider****** */
+
+
+
+
+/* my pic */
+.slider {
+  position: relative;
+  width: 800px; /* Adjust width as needed */
+  height: 500px; /* Adjust height as needed */
+margin-top: 100px;
+  overflow: hidden;
+}
+
+
+
+.slide-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-description {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+
+/*  */
+
+/* styles.css */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #0007bf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+.scroll-to-top.visible {
+  display: block; /* Show button when visible */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 30px; /* Adjust bottom position for smaller screens */
+    right: 30px; /* Adjust right position for smaller screens */
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+  }
+}

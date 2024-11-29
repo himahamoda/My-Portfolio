@@ -1,0 +1,114 @@
+.campaign-reports-container {
+  max-width: 1100px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff; 
+  text-align: center; 
+  margin: 20px 0; 
+}
+
+.campaign-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.p{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff; 
+  text-align: center; 
+  margin: 20px 0; 
+}
+
+.campaign-button {
+  background-color: #f7fafc; /* Gray-100 */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  color: #4a5568; /* Gray-600 */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex: 1 1 150px; /* Allow buttons to grow and shrink */
+}
+
+.campaign-button:hover {
+  background-color: #ffffff; /* Gray-200 */
+}
+
+.campaign-button.active {
+  background-color: #000000; /* Blue-500 */
+  color: white;
+}
+
+.report-section {
+  margin-top: 2rem;
+}
+
+.report-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff; /* Gray-900 */
+}
+
+.report-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.details-card,
+.performance-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000000; /* Gray-900 */
+}
+.description{
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff; 
+
+}
+.card-Head{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff; 
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.image-container {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Maintain aspect ratio */
+  max-width: 500px; /* Set a max width for images */
+}

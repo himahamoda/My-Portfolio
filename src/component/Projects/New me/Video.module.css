@@ -1,0 +1,75 @@
+.app {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 40px;
+    border-top-left-radius:  20px; 
+    border-bottom-right-radius: 20px;
+
+  }
+  
+  .videobackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+    opacity: 1; 
+    
+    transition: opacity 2s ease-in-out; 
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1; 
+
+  }
+  
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  .video-background {
+    animation: fade-out 5s linear infinite; 
+  }
+
+
+  /* .app {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .videobackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure the video is behind the content */
+    /* transition: opacity 1s ease-in-out; /* Smooth transition */
+  
+  
+  .content {
+    position: relative;
+    z-index: 0; 
+    color: #fff;
+    padding: 20px;
+  } 
